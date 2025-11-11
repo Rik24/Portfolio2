@@ -158,6 +158,9 @@
             background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
             position: relative;
             overflow: hidden;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
         }
 
         .intro::before {
@@ -187,6 +190,7 @@
         .intro-container {
             position: relative;
             z-index: 1;
+            width: 100%;
         }
 
         .intro-header {
@@ -662,6 +666,12 @@
             
             .nav-menu {
                 margin-top: var(--spacing-md);
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .nav-menu li {
+                margin: 0 var(--spacing-sm);
             }
             
             .intro-header {
@@ -675,6 +685,10 @@
             .project-links {
                 flex-direction: column;
                 align-items: center;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -713,7 +727,8 @@
     <section id="about">
         <div class="container about-container">
             <div class="about-image">
-                <img src="https://via.placeholder.com/400x500/8e7549/ffffff?text=Danylo" alt="Danylo's Photo">
+                <!-- Replace with your actual photo -->
+                <img src="https://via.placeholder.com/400x500/8e7549/ffffff?text=Your+Photo" alt="Danylo's Photo">
             </div>
             <div class="about-content">
                 <div class="about-header">
@@ -747,17 +762,17 @@
                 </div>
                 <div class="skills-item">
                     <div class="skills-icon">
-                        <i class="fab fa-java"></i>
+                        <i class="fab fa-js"></i>
                     </div>
-                    <h3>Java</h3>
-                    <p>DOM manipulation, API integration, OOP</p>
+                    <h3>JavaScript</h3>
+                    <p>DOM manipulation, API integration, modern frameworks</p>
                 </div>
                 <div class="skills-item">
                     <div class="skills-icon">
-                        <i class="fas fa-code"></i>
+                        <i class="fab fa-java"></i>
                     </div>
-                    <h3>C Programming</h3>
-                    <p>System programming, algorithms, data structures</p>
+                    <h3>Java</h3>
+                    <p>OOP, algorithms, application development</p>
                 </div>
                 <div class="skills-item">
                     <div class="skills-icon">
@@ -806,7 +821,7 @@
                     <h3>Wayflare - CASSINI Hackathon</h3>
                     <p>10th CASSINI Hackathon: EU Space for Consumer Experience</p>
                     <p>Challenge #1: Immersive Gameplay with Space Technology & Data</p>
-                    <p>Slovakia, 2025</p>
+                    <p>Slovakia, 2023</p>
                     
                     <div class="project-links">
                         <a href="https://github.com/Jeszter/Wayflare" class="project-link" target="_blank">
@@ -816,8 +831,7 @@
                 </div>
             </div>
             
-
-        </div>
+                    </div>
     </section>
 
     <section id="education">
@@ -845,16 +859,16 @@
             <div class="socials">
                 <h2 class="socials-title">Let's Connect</h2>
                 <div class="social-icons">
-                    <a href="https://www.linkedin.com" class="social-icon">
+                    <a href="https://www.linkedin.com" class="social-icon" target="_blank">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="https://github.com" class="social-icon">
+                    <a href="https://github.com" class="social-icon" target="_blank">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="mailto:example@example.com" class="social-icon">
+                    <a href="mailto:your-email@example.com" class="social-icon">
                         <i class="far fa-envelope"></i>
                     </a>
-                    <a href="https://twitter.com" class="social-icon">
+                    <a href="https://twitter.com" class="social-icon" target="_blank">
                         <i class="fab fa-twitter"></i>
                     </a>
                 </div>
@@ -893,7 +907,7 @@
                 const particle = document.createElement('div');
                 particle.classList.add('particle');
                 
-
+                // Случайные свойства для частиц
                 const size = Math.random() * 5 + 2;
                 const left = Math.random() * 100;
                 const animationDuration = Math.random() * 20 + 10;
@@ -908,20 +922,8 @@
                 particlesContainer.appendChild(particle);
             }
         }
-
-
         window.addEventListener('DOMContentLoaded', () => {
             createParticles();
-            
-
-            const introHeader = document.querySelector('.intro-header');
-            introHeader.style.animation = 'fadeInUp 1s ease 0.2s both';
-                        const introText = document.querySelector('.intro-text');
-            introText.style.animation = 'fadeInUp 1s ease 0.4s both';
-            
-
-            const introButton = document.querySelector('.btn-primary');
-            introButton.style.animation = 'fadeInUp 1s ease 0.6s both';
         });
     </script>
 </body>
